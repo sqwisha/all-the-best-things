@@ -1,0 +1,161 @@
+html {
+  background-image: url("http://i64.tinypic.com/2qdzqrd.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+}
+
+.grid {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-areas: 
+    ". header header header header"
+    ". navbar navbar navbar navbar"
+    ". about about about ."
+    ". animals animals animals ."
+    ". places places places ."
+    ". food food food ."
+    ". code code code ."
+    "footer footer footer footer footer";
+  grid-template-columns: 35px auto auto auto 35px;
+  grid-template-rows: minmax(100px, auto);
+}
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100px;
+  grid-area: header;
+  background-color: black;
+  margin: -20px -30vw 0px -100vw;
+  padding: 20px 30vw 0px 100vw;
+}
+
+.header h1 {
+  align-self: center;
+  color: white;
+  font-family: Calibri, Arial, sans-serif;
+  margin-top: 10px;
+}
+
+.navbar {
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  grid-area: navbar;
+  justify-self: left;
+}
+
+.navbar a {
+  display: block;
+  min-width: min-content;
+  max-width: max-content;
+  padding: 15px;
+  margin: 0;
+  align-self: center;
+  justify-self: stretch;
+}
+
+.navbar a:hover{
+  color: black;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.navbar a {
+  color: white;
+  font-family: Calibri, Arial, sans-serif;
+  text-decoration: none;
+}
+
+h3 {
+  color: rgb(0, 0, 3);
+  font-family: Calibri, Arial, sans-serif;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 10px;
+  grid-area: title;
+}
+
+.subject {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white;
+  max-width: 900px;
+}
+
+.subject h4 {
+  font-size: 20px;
+}
+
+.subject h4 {
+  grid-area: title;
+  padding-left: 20px;
+}
+
+.subject img {
+  width: 200px;
+  height: 200px;
+  opacity: 0.7;
+  grid-area: img;
+}
+
+.subject-grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 20px;
+}
+
+.details {
+  display: grid;
+  grid-template-areas: 
+    "title . "
+    "img text";
+  grid-template-columns: 1fr 1fr;
+  justify-items: stretch;
+  align-items: center;
+}
+
+.details:hover > img {
+  opacity: 1;
+}
+
+.paragraph {
+  max-width: 900px;
+  padding: 0px 5px 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+  text-rendering: optimizeLegibility;
+  padding-left: 10px;
+  grid-area: text;
+}
+
+#about {
+  grid-area: about;
+}
+
+#animals {
+  grid-area: animals;
+}
+
+#places {
+  grid-area: places;
+}
+
+#food {
+  grid-area: food;
+}
+
+#code {
+  grid-area: code;
+}
