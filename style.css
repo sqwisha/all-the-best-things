@@ -1,15 +1,15 @@
 html {
-  background-image: url("http://i64.tinypic.com/2qdzqrd.jpg");
+  background: url("https://preview.ibb.co/hoZEHU/back_teal_jellyfish.jpg") no-repeat center top fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
+  background-position: absolute;
   overflow-x: hidden;
 }
 
 body {
+  margin: 0;
   height: 100%;
 }
 
